@@ -16,7 +16,7 @@
       "store.js",
       "background.js"
     ],
-    "persistent": false
+    "persistent": true
   },
   "options_ui": {
     "page": "options.html",
