@@ -1,0 +1,36 @@
+{
+  "manifest_version": 2,
+  "name": "URL Keybinds",
+  "version": "1.0",
+  "description": "Unlimited keyboard shortcuts that open configured URLs in a new tab, works from any page.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "url-shortcuts@local"
+    }
+  },
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "store.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "experiment_apis": {
+    "urlShortcuts": {
+      "schema": "schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "paths": [["urlShortcuts"]],
+        "script": "parent.js",
+        "events": ["startup"]
+      }
+    }
+  }
+}

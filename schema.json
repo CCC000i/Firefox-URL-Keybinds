@@ -1,0 +1,74 @@
+[
+  {
+    "namespace": "urlShortcuts",
+    "functions": [
+      {
+        "name": "setBindings",
+        "type": "function",
+        "async": true,
+        "parameters": [
+          {
+            "name": "bindings",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "ctrl": {
+                  "type": "boolean"
+                },
+                "alt": {
+                  "type": "boolean"
+                },
+                "shift": {
+                  "type": "boolean"
+                },
+                "meta": {
+                  "type": "boolean"
+                },
+                "url": {
+                  "type": "string",
+                  "optional": true
+                },
+                "action": {
+                  "type": "string",
+                  "optional": true
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "name": "setPaused",
+        "type": "function",
+        "async": true,
+        "parameters": [
+          {
+            "name": "paused",
+            "type": "boolean"
+          }
+        ]
+      },
+      {
+        "name": "openUrl",
+        "type": "function",
+        "async": true,
+        "parameters": [
+          {
+            "name": "url",
+            "type": "string"
+          }
+        ]
+      },
+      {
+        "name": "getStatus",
+        "type": "function",
+        "async": true,
+        "parameters": []
+      }
+    ]
+  }
+]
